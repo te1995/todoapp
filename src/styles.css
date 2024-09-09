@@ -1,1 +1,183 @@
 @import 'modern-normalize/modern-normalize.css';
+
+.sidebar {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 40px;
+    background-color: #F7EFE5;
+}
+
+
+.content {
+    grid-column: 2/6;
+    max-height: 100vh;
+    display: grid;
+    grid-template-rows: repeat(10, 1fr);
+    overflow: scroll;
+    padding: 10%;
+    padding-top: 5%;
+}
+
+body {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+
+.buttonNewProject {
+    appearance: none;
+    background-color: none;
+    width: 5%;
+    height: 500px;
+    align-self: center;
+    background-image: url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2024%2024%22%3E%3Ctitle%3Eplus%3C/title%3E%3Cpath%20d%3D%22M19%2C13H13V19H11V13H5V11H11V5H13V11H19V13Z%22%20/%3E%3C/svg%3E');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 100%;
+    padding: 5%;
+    background-color: transparent;
+    cursor: pointer;
+} 
+
+.buttonNewProject:hover {
+    background-color: #674188;
+}
+
+.pleaseAlign {
+    display: flex;
+    flex: 1;
+    justify-content: space-between;
+    background-color: 2px solid black;
+}
+
+button {
+    display: block;
+}
+
+.todoDone {
+    appearance: none;
+    border: 2px solid black;
+    flex-grow: 1;
+    height: auto;
+    max-width: 3%;
+    aspect-ratio: 1 / 1;
+    border-radius: 100%;
+}
+
+.todoDone:hover {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white"><path d="M19.78,2.2L24,6.42L8.44,22L0,13.55L4.22,9.33L8.44,13.55L19.78,2.2M19.78,5L8.44,16.36L4.22,12.19L2.81,13.55L8.44,19.17L21.19,6.42L19.78,5Z" /></svg>');
+    background-color: #674188;
+    border: 2px solid  #674188;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.todoListElements {
+    display: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: auto;
+    gap: 5%;
+    height: 10vh;
+    border-bottom: 2px solid rgb(206, 206, 206);
+    width: 100%;
+    padding: 2%;
+    font-size: 1.2rem;
+}
+
+.headingmain {
+    grid-row: 1/1;
+    display: border-box;
+    display: flex;
+    padding: auto;
+
+}
+
+.projectButton {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    max-height: 20%;
+    gap: 10%;
+}
+
+.menubuttons {
+    background-color: #F7EFE5;
+    border: none;
+    border-bottom: 2px solid rgb(167, 167, 167);
+    width: 80%;   
+    margin: 0 auto;  
+    padding: 2%;
+    cursor: pointer;
+    font-size: 1.15rem;
+}
+
+.menubuttons:hover {
+    border-bottom: 2px solid #674188;
+}
+
+.mainButtons {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    max-height: 20%;
+    gap: 10%;
+}
+
+.highPriority {
+    display: flex;
+    gap: 5%;
+    margin-bottom: 5%;
+}
+
+.todoForm {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+
+.newProject {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+
+.createProject {
+    background-color: white;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    padding: 20px;
+    width: min(45%, 300px);
+    display: flex;
+    flex-direction: column;
+    height: 20vh;
+}
+
+.createTodoForm {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    width: min(45%, 300px);
+    display: flex;
+    flex-direction: column;
+}
+
+#projectList {
+    margin-bottom: 10px;
+}

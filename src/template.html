@@ -3,8 +3,68 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Restaurant</title>
+    <title>Tobis Todo's</title>
 </head>
 <body>
+    <div class="sidebar">
+    <div class="mainButtons">
+        <button class = "menubuttons overviewButton" type = "button">Overview</button>
+        <button class = "newTodo menubuttons" type = "button">Add todo</button>
+        <button class = "menubuttons dueToday" type = "button">Due today</button>
+        <button class = "menubuttons duethisweek" type = "button">Due this week</button>
+    </div>
+    <div class="projectButton">
+        <h2>Projects</h2>
+        <div class="projectsDiv">
+            <button class = "menubuttons buttonDefault" type="button" value = "Default">#Default</button>
+        </div>
+        <button class = "buttonNewProject" type="submit"></button>
+    </div>
+    </div>
+    <main class="content">
+    </main>
+
+    <div class="todoForm">
+        <form class = "createTodoForm" id="createTodoForm">
+            <label for="todoName">Todo Name:</label>
+            <input type="text" id="todoName" name="todoName"><br>
+
+            <label for="description">Description:</label>
+            <textarea id="description" name="description"></textarea><br>
+
+            <label for="dueDate">Due Date:</label>
+            <input type="date" id="dueDate" name="dueDate"><br>
+
+            <label for="project">Project</label>
+            <select id="projectListNewTodo" name="project">
+            <option value="Default">#Default</option>
+            </select>
+
+            <div class="highPriority">
+                <input type="checkbox" id="priority" name="priority" value="High Priority">
+                <label for="priority">Mark as high priority</label><br>
+            </div>
+
+            <button class ="submitTodo" type="submit">Add Todo</button>
+        </form>
+    </div>
+
+    <div class="newProject">
+        <form class = "createProject" id="createProject">
+            <label for="projectName">Project Name:</label>
+            <input type="text" id="projectName" name="projectName" required><br>
+
+            <label for="project">Project color:</label>
+            <select id="projectList" name="project">
+            <option value="red">Red</option>
+            <option value="green">Green</option>
+            <option value="blue">Blue</option>
+            <option value="yellow">Yellow</option>
+            </select>
+
+            <button class ="submitProject" type="submit">Add Project</button>
+        </form>
+    </div>
+
 </body>
 </html>
